@@ -16,9 +16,7 @@ function loadUsers (options) {
     .then(({ results }) => {
       renderUsers(results);
     })
-    .catch(e => {
-      console.log('e :>> ', e);
-    });
+    .catch(e => {});
 }
 
 const [beginingBtn, prevBtn, nextBtn] = document.querySelectorAll('button');
