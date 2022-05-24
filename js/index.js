@@ -14,7 +14,6 @@ function loadUsers (options) {
   )
     .then(response => response.json())
     .then(({ results }) => {
-      console.log('data :>> ', results);
       renderUsers(results);
     })
     .catch(e => {
@@ -29,7 +28,7 @@ prevBtn.addEventListener('click', prevBtnHandler);
 nextBtn.addEventListener('click', nextBtnHandler);
 
 function beginingBtnHandler () {
-  options.page = 0;
+  options.page = 1;
   loadUsers(options);
 }
 
